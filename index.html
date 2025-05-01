@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UnitBot - Smart Maintenance Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --accent: #0fffc1;
+      --accent2: #fffc00;
+      --accent3: #00f7ff;
+      --accent4: #ff8800;
+      --text: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1em 2em;
+      background-color: #0f1624;
+      box-shadow: 0 2px 10px rgba(0, 255, 204, 0.1);
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav a {
+      color: var(--accent);
+      margin-left: 1.5em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6em 2em;
+      background: linear-gradient(180deg, #111827, #0d1117);
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      color: var(--accent2);
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin: 1em 0 2em;
+    }
+
+    .cta-button {
+      background: var(--accent);
+      border: none;
+      padding: 1em 2em;
+      font-size: 1em;
+      color: #000;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    .features {
+      padding: 4em 2em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2em;
+      background-color: #0f1624;
+    }
+
+    .feature-card {
+      background-color: #1f2937;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+    }
+
+    .dashboard-preview {
+      padding: 4em 2em;
+      text-align: center;
+      background-color: #111827;
+    }
+
+    .interactive-button {
+      background: linear-gradient(45deg, var(--accent3), var(--accent4));
+      border: none;
+      padding: 0.75em 1.5em;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+      border-radius: 6px;
+      margin-top: 1em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #0d1117;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.png" alt="TenantIQ Logo" />
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>UnitBot</h1>
+    <p>Tenant Maintenance & Request Automation Platform.</p>
+    <button class="cta-button" onclick="alert('Prototype coming soon!')">Request a Demo</button>
+  </section>
+
+  <section id="features" class="features">
+    <div class="feature-card">
+      <h3>Smart Request Submission</h3>
+      <p>Tenants can easily submit maintenance requests with details and images.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Automated Vendor Matching</h3>
+      <p>Automatically assign the right vendors to incoming maintenance jobs.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Live Request Tracking</h3>
+      <p>Real-time updates through every stage: Pending → In Progress → Completed.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Predictive Insights</h3>
+      <p>Analyze trends, anticipate issues, and cut costs with smart analytics.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Survey Feedback</h3>
+      <p>Gauge tenant satisfaction post-service and improve your operations.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Vendor Scorecards</h3>
+      <p>Rate vendors, track insurance, and manage your network with ease.</p>
+    </div>
+  </section>
+
+  <section id="dashboard" class="dashboard-preview">
+    <h2>Modern Dashboard</h2>
+    <p>Manage requests, vendors, and insights in one place.</p>
+    <img src="dashboard-mockup.png" alt="Dashboard Preview" style="width:80%; border-radius: 8px; box-shadow: 0 0 12px #0fffc1;" />
+    <button class="interactive-button" onclick="alert('Login coming soon!')">See Prototype</button>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 UnitBot All rights reserved. </p>
+  </footer>
+</body>
+</html>
