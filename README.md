@@ -5,7 +5,4 @@ UnitBot is a modern automation platform for streamlining tenant maintenance and 
 ## 🚀 Features
 - Tenant-friendly issue submission interface
 - Automated vendor assignment and tracking
-- Status updates: Pending → In Progress → Completed
-- Analytics & predictive maintenance insights
-- Optional post-job tenant surveys
 - Dashboard for request management and vendor performance
