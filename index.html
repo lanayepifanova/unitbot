@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>UnitBot - Smart Maintenance Management</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #0d1117;
@@ -18,7 +17,7 @@
 
     body {
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       color: var(--text);
     }
@@ -52,6 +51,7 @@
     .hero h1 {
       font-size: 3em;
       color: var(--accent2);
+      font-family: 'Orbitron', sans-serif;
     }
 
     .hero p {
@@ -68,12 +68,42 @@
       cursor: pointer;
       border-radius: 8px;
       box-shadow: 0 0 10px var(--accent);
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .signup-form {
+      display: none;
+      max-width: 400px;
+      margin: 2em auto;
+      padding: 2em;
+      background-color: #1f2937;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+    }
+
+    .signup-form input {
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 0.8em;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    .signup-form button {
+      background: var(--accent3);
+      border: none;
+      padding: 0.8em;
+      width: 100%;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     .features {
       padding: 4em 2em;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2em;
       background-color: #0f1624;
     }
@@ -82,7 +112,12 @@
       background-color: #1f2937;
       padding: 2em;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
     }
 
     .dashboard-preview {
@@ -102,30 +137,85 @@
       margin-top: 1em;
     }
 
+    .faq-section, .demo-video {
+      padding: 4em 2em;
+      background-color: #0d1117;
+    }
+
+    .faq-section h2, .demo-video h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .faq-item {
+      max-width: 700px;
+      margin: 1em auto;
+    }
+
+    .faq-item h4 {
+      margin: 0 0 0.5em;
+      color: var(--accent);
+    }
+
+    .demo-video iframe {
+      display: block;
+      margin: 2em auto;
+      width: 100%;
+      max-width: 720px;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 12px var(--accent);
+    }
+
     footer {
       text-align: center;
       padding: 2em;
       background-color: #0d1117;
       color: #888;
     }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .dashboard-preview img {
+        width: 100%;
+      }
+
+      .demo-video iframe {
+        height: 240px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="logo.png" alt="TenantIQ Logo" />
+    <img src="logo.png" alt="UnitBot Logo" />
     <nav>
       <a href="#features">Features</a>
-      <a href="#dashboard">Dashboard</a>
-      <a href="#contact">Contact</a>
+      <a href="#demo">Demo</a>
+      <a href="#faq">FAQ</a>
     </nav>
   </header>
 
   <section class="hero">
     <h1>UnitBot</h1>
     <p>Tenant Maintenance & Request Automation Platform.</p>
-    <button class="cta-button" onclick="alert('Prototype coming soon!')">Request a Demo</button>
+    <button class="cta-button" onclick="document.getElementById('signup').style.display='block'">Request a Demo</button>
   </section>
+
+  <div id="signup" class="signup-form">
+    <h3 style="text-align:center;">Sign Up for Early Access</h3>
+    <form onsubmit="event.preventDefault(); alert('Thanks for signing up!');">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="company" placeholder="Company Name" required />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 
   <section id="features" class="features">
     <div class="feature-card">
@@ -154,17 +244,38 @@
     </div>
   </section>
 
-  <section id="dashboard" class="dashboard-preview">
+  <section id="demo" class="demo-video">
+    <h2>Watch a Demo</h2>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </section>
+
+  <section id="faq" class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h4>What is UnitBot?</h4>
+      <p>A platform to automate and streamline tenant maintenance requests for commercial property managers.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Is this for residential or commercial?</h4>
+      <p>UnitBot is purpose-built for commercial real estate teams and property managers.</p>
+    </div>
+    <div class="faq-item">
+      <h4>When is the product launching?</h4>
+      <p>We’re currently onboarding early access users — sign up today to be part of the pilot group!</p>
+    </div>
+  </section>
+
+  <section class="dashboard-preview">
     <h2>Modern Dashboard</h2>
     <p>Manage requests, vendors, and insights in one place.</p>
     <img src="dashboard-mockup.png" alt="Dashboard Preview" style="width:50%; border-radius: 8px; box-shadow: 0 0 12px #0fffc1;" />
     <div>
-    <button class="interactive-button" onclick="alert('Login coming soon!')">See Prototype</button>
+      <button class="interactive-button" onclick="alert('Login coming soon!')">See Prototype</button>
     </div>
   </section>
 
-  <footer id="contact">
-    <p>&copy; 2025 UnitBot All rights reserved. </p>
+  <footer>
+    <p>&copy; 2025 UnitBot. All rights reserved.</p>
   </footer>
 </body>
 </html>
