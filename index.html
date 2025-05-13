@@ -3,23 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UnitBot - Smart Maintenance Management</title>
+  <title>UnitBot - All-in-One Property Management Platform</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-  <!-- Android Chrome Icons -->
+  <!-- Icons & Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-
-  <!-- Standard Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-
-  <!-- Default Favicon -->
   <link rel="shortcut icon" href="/favicon.ico">
-  
-  <!-- Manifest for PWA -->
   <link rel="manifest" href="/site.webmanifest">
 
   <style>
@@ -137,29 +130,12 @@
       box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
     }
 
-    .dashboard-preview {
-      padding: 4em 2em;
-      text-align: center;
-      background-color: #111827;
-    }
-
-    .interactive-button {
-      background: linear-gradient(45deg, var(--accent3), var(--accent4));
-      border: none;
-      padding: 0.75em 1.5em;
-      font-weight: bold;
-      color: #000;
-      cursor: pointer;
-      border-radius: 6px;
-      margin-top: 1em;
-    }
-
-    .faq-section, .demo-video {
+    .faq-section {
       padding: 4em 2em;
       background-color: #0d1117;
     }
 
-    .faq-section h2, .demo-video h2 {
+    .faq-section h2 {
       text-align: center;
       margin-bottom: 1em;
     }
@@ -174,17 +150,6 @@
       color: var(--accent);
     }
 
-    .demo-video iframe {
-      display: block;
-      margin: 2em auto;
-      width: 100%;
-      max-width: 720px;
-      height: 400px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 0 12px var(--accent);
-    }
-
     footer {
       text-align: center;
       padding: 2em;
@@ -195,10 +160,6 @@
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 2em;
-      }
-
-      .dashboard-preview img {
-        width: 100%;
       }
 
       .demo-video iframe {
@@ -213,15 +174,14 @@
     <img src="logo.png" alt="UnitBot Logo" />
     <nav>
       <a href="#features">Features</a>
-      <a href="#demo">Demo</a>
       <a href="#faq">FAQ</a>
     </nav>
   </header>
 
   <section class="hero">
     <h1>UnitBot</h1>
-    <p>Tenant Maintenance & Request Automation Platform.</p>
-    <p>Built for Landlords, Property Managers and CRE Teams.</p>
+    <p>All-in-One Property Management Platform.</p>
+    <p>For Property Managers, CRE Teams, and Private Landlords.</p>
     <button class="cta-button" onclick="document.getElementById('signup').style.display='block'">Request a Demo</button>
   </section>
 
@@ -237,42 +197,39 @@
 
   <section id="features" class="features">
     <div class="feature-card">
-      <h3>Smart Request Submission</h3>
-      <p>Tenants can easily submit maintenance requests with details and images.</p>
+      <h3>Leasing Automation</h3>
+      <p>Generate, send, and manage digital lease agreements with integrated e-signatures.</p>
+      <p>Automated workflows for tenant onboarding, including ID verification and payment setup.</p>
+      <p>Secure document storage with compliance tracking tools.</p>
     </div>
+    
     <div class="feature-card">
-      <h3>Automated Vendor Matching</h3>
-      <p>Automatically assign the right vendors to incoming maintenance jobs.</p>
+      <h3>Maintenance Management</h3>
+      <p>Simple ticket submission and tracking for tenants with chat, photos, and feedback.</p>
+      <p>Requests are automatically routed to vendors or in-house teams with SLA tracking.</p>
+      <p>Real-time updates and maintenance performance reporting.</p>
     </div>
+
     <div class="feature-card">
-      <h3>Live Request Tracking</h3>
-      <p>Real-time updates through every stage: Pending → In Progress → Completed.</p>
+      <h3>Property Management Core</h3>
+      <p>Manage your entire portfolio: units, leases, tenants, and maintenance in one dashboard.</p>
+      <p>Automated rent collection, financial reporting, and renewal reminders.</p>
+      <p>Built-in communication portal for seamless messaging with tenants and vendors.</p>
     </div>
+
     <div class="feature-card">
-      <h3>Predictive Insights</h3>
-      <p>Analyze trends, anticipate issues, and cut costs with smart analytics.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Survey Feedback</h3>
-      <p>Gauge tenant satisfaction post-service and improve your operations.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Vendor Scorecards</h3>
-      <p>Rate vendors, track insurance, and manage your network with ease.</p>
+      <h3>Analytics & Reporting</h3>
+      <p>Track lease performance and maintenance costs with dynamic dashboards.</p>
+      <p>Gain visibility into occupancy/vacancy trends and revenue forecasts.</p>
+      <p>Exportable profit and loss summaries for strategic decision-making.</p>
     </div>
   </section>
-
-  <!-- <section id="demo" class="demo-video">
-    <h2>Watch a Demo</h2>
-    <iframe src="xxx" allowfullscreen></iframe>
-  </section> 
-  -->
 
   <section id="faq" class="faq-section">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
       <h4>What is UnitBot?</h4>
-      <p>We automate and streamline tenant maintenance requests for property managers!</p>
+      <p>UnitBot is an all-in-one software platform for property managers, CRE teams, and landlords to manage leasing, maintenance, and portfolio operations efficiently.</p>
     </div>
     <div class="faq-item">
       <h4>Is this for residential or commercial?</h4>
